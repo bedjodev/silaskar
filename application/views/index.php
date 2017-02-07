@@ -110,7 +110,10 @@
                         <h4>Pengaduan Baru</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <center>
+                          <p style="font-size: 67px; color: #337ab7"><i class="fa fa-file-o fa-6" aria-hidden="true"></i></p>
+                        </center>
+
                         <a href="home/pengaduan_baru" class="btn btn-primary">Masuk</a>
                     </div>
                 </div>
@@ -126,10 +129,10 @@
                         <li>SLIDE 3</li>
                         <li style="background: #aaa;">SLIDE 4</li> -->
 
-                        <li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"></li>
-                        <li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"></li>
-                        <li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"></li>
-                        <li><img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"></li>
+                        <li><img src="assets/images/slider/1.png"></li>
+                        <li><img src="assets/images/slider/2.png"></li>
+                        <li><img src="assets/images/slider/1.png"></li>
+                        <li><img src="assets/images/slider/2.png"></li>
 
                       </ul>  
                     </div>
@@ -142,7 +145,9 @@
                         <h4>Panduan Pengaduan</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <center>
+                          <p style="font-size: 67px; color: #f0ad4e"><i class="fa fa-book fa-6" aria-hidden="true"></i></p>
+                        </center>
                         <a href="#" class="btn btn-warning">Masuk</a>
                     </div>
                 </div>
@@ -155,8 +160,10 @@
                         <h4>Status Pengaduan</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#status-pengaduan">Masuk</a>
+                        <center>
+                          <p style="font-size: 67px; color: #449d44"><i class="fa  fa-check-square-o fa-6" aria-hidden="true"></i></p>
+                        </center>
+                        <a href="#" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#status-pengaduan">Masuk</a>
                     </div>
                 </div>
             </div>
@@ -166,7 +173,9 @@
                         <h4>Tentang BPMPPKB</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <center>
+                          <p style="font-size: 67px; color: #31b0d5"><i class="fa   fa-building fa-6" aria-hidden="true"></i></p>
+                        </center>
                         <a href="#" class="btn btn-info">Masuk</a>
                     </div>
                 </div>
@@ -177,13 +186,15 @@
                         <h4>F.A.Q</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <center>
+                          <p style="font-size: 67px; color: #888888"><i class="fa fa-comments fa-6" aria-hidden="true"></i></p>
+                        </center>
                         <a href="#" class="btn btn-default">Masuk</a>
                     </div>
                 </div>
             </div>
 
-            <p style="padding-top: 20px">&nbsp;</p>
+            <p>&nbsp;</p>
             <p><center>Copyright &copy; SILASKAR BPMPPKB 2017</center></p>
         </div>
 

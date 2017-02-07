@@ -100,29 +100,30 @@
                                                         <span class="hidden-xs">4. Laporkan</span> 
                                                     </a> 
                                                 </li> 
-                                            </ul> 
+                                            </ul>
+                                            <form action="<?php echo base_url('home/tambah_kasus_online');?>" method = "post"> 
                                             <div class="tab-content" style="padding-bottom: -200px"> 
                                                  <div class="tab-pane active" id="pelapor">
                                                     <h3 style="padding-bottom: 10px">Data Diri Pelapor</h3>
                                                     <div class="form-group clearfix">
                                                         <label class="col-lg-3 control-label " for="userName">Nama Pelapor *</label>
                                                         <div class="col-lg-9">
-                                                            <input class="form-control required" id="userName" name="userName" type="text">
+                                                            <input class="form-control required" id=" " name="nama_pelapor" type="text" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
                                                         <label class="col-lg-3 control-label " for="userName">NIK *</label>
                                                         <div class="col-lg-9">
-                                                            <input class="form-control required" id="userName" name="userName" type="text">
+                                                            <input class="form-control required" id=" " name="nik_pelapor" type="text" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
                                                         <label class="col-lg-3 control-label " for="password">Jenis Kelamin *</label>
                                                         <div class="col-lg-9">
-                                                            <select class="form-control">
+                                                            <select class="form-control" name="jk_pelapor" required>
                                                                 <option>-</option>
-                                                                <option>Laki-Laki</option>
-                                                                <option>Perempuan</option>
+                                                                <option value="0">Laki-Laki</option>
+                                                                <option value="1">Perempuan</option>
                                                             </select>
 
                                                         </div>
@@ -130,23 +131,23 @@
                                                     <div class="form-group clearfix">
                                                         <label class="col-lg-3 control-label " for="confirm">Alamat Rumah *</label>
                                                         <div class="col-lg-9">
-                                                            <input id="confirm" name="confirm" type="text" class="required form-control">
+                                                            <input id="confirm" name="alamat_rumah" type="text" class="required form-control" required>
                                                         </div>
                                                     </div> 
                                                     <div class="form-group clearfix">
-                                                        <label class="col-lg-3 control-label " for="confirm">No Telp</label>
+                                                        <label class="col-lg-3 control-label " for="confirm">No Telp *</label>
                                                         <div class="col-lg-9">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                                                                <input type="text" id="example-input1-group1" name="example-input1-group1" class="form-control" placeholder="ex: 081123456789">
+                                                                <input type="text" id="example-input1-group1" name="nomor_telp" class="form-control" placeholder="contoh: 081123456789" required>
                                                             </div>
                                                         </div>
                                                     </div> 
                                                     <div class="form-group clearfix">
-                                                        <label class="col-lg-3 control-label " for="confirm">Email</label>
+                                                        <label class="col-lg-3 control-label " for="confirm">Email *</label>
                                                         <div class="col-lg-9">
                                                             <div class="input-group m-t-10">
-                                                                <input type="email" id="example-input2-group1" name="example-input2-group1" class="form-control" placeholder="Email">
+                                                                <input type="email" id="example-input2-group1" name="email" class="form-control" placeholder="Email" required>
                                                                 <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
                                                             </div>
                                                         </div>
@@ -156,18 +157,24 @@
                                                     <h3 style="padding-bottom: 10px">Data Ciri Korban Kekerasan</h3>
                                                     <div class="col-md-6">
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="userName">Nama</label>
+                                                            <label class="col-lg-3 control-label " for="">NIK Korban</label>
                                                             <div class="col-lg-9">
-                                                                <input class="form-control required" id="userName" name="userName" type="text">
+                                                                <input class="form-control required" id="" name="nik_korban" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group clearfix">
+                                                            <label class="col-lg-3 control-label " for="">Nama</label>
+                                                            <div class="col-lg-9">
+                                                                <input class="form-control required" id="" name="nama_korban" type="text">
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="password">Jenis Kelamin</label>
                                                             <div class="col-lg-9">
-                                                                <select class="form-control">
+                                                                <select name="jk_korban" class="form-control">
                                                                     <option>-</option>
-                                                                    <option>Laki-Laki</option>
-                                                                    <option>Perempuan</option>
+                                                                    <option value="0">Laki-Laki</option>
+                                                                    <option value="1">Perempuan</option>
                                                                 </select>
 
                                                             </div>
@@ -176,50 +183,62 @@
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Tanggal Kejadian</label>
                                                             <div class="col-lg-9">
-                                                                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
+                                                                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker" name="tanggal_kejadian">
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="userName">Kecamatan</label>
+                                                            <label class="col-lg-3 control-label " for=" ">Kecamatan</label>
                                                             <div class="col-lg-9">
-                                                                <select class="form-control">
-                                                                    <option>-</option>
-                                                                    <option>Loading....</option>
+                                                                <select class="form-control" name="kecamatan_id" id="kecamatan_id">
+                                                                    <option value="">- Pilih Kecamatan -</option>  
+                                                                    <?php
+                                                                        foreach($kecamatan as $kc){
+                                                                    ?>
+                                                                        <option value="<?php echo $kc->id_kecamatan ?>"
+                                                                        <?php if (isset($id_kecamatan) AND $id_kecamatan==$kc->id_kecamatan) echo " selected";?>>
+                                                                        <?php echo $kc->nama_kecamatan ?>
+                                                                        </option>
+                                                                    <?php
+                                                                        }
+                                                                    ?>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="password">Kelurahan</label>
+                                                            <label class="col-lg-3 control-label " for=" ">Kelurahan</label>
                                                             <div class="col-lg-9">
-                                                                <select class="form-control">
-                                                                    <option>-</option>
-                                                                    <option>Loading....</option>
+                                                                
+                                                                <select class="form-control" name="kelurahan_id" id="id_kelurahan">
+                                                                    <?php
+                                                                        $id_kelurahan = isset($_REQUEST["id_kelurahan"])?$_REQUEST["id_kelurahan"]:'';
+
+
+                                                                    ?>
+                                                                     <?php
+                                                                        foreach($kelurahan as $kl){
+                                                                    ?>
+                                                                        <option value="<?php echo $kl->id_kelurahan ?>"
+                                                                        <?php if (isset($id_kelurahan) AND $id_kelurahan==$kl->id_kelurahan) echo " selected";?>>
+                                                                        <?php echo $kl->nama_kelurahan ?>
+                                                                        </option>
+                                                                    <?php
+                                                                        }
+                                                                    ?>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Alamat Rumah</label>
                                                             <div class="col-lg-9">
-                                                                <input id="confirm" name="confirm" type="text" class="required form-control">
-                                                            </div>
-                                                        </div>                                                        
-                                                        <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="confirm">Jenis&nbsp;Kasus</label>
-                                                            <div class="col-lg-9">
-                                                                <select class="form-control">
-                                                                    <option>-</option>
-                                                                    <option>Baru</option>
-                                                                    <option>Ulang</option>
-                                                                    <option>Rujukan</option>
-                                                                </select>
+                                                                <input id="confirm" name="alamat_korban" type="text" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>  
                                                     <div class="col-md-6">
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="userName">Usia Korban</label>
+                                                            <label class="col-lg-3 control-label " for=" ">Usia Korban</label>
                                                             <div class="col-lg-9">
-                                                                <select name="usia_id" id="usia" class="form-control" required="">
+                                                                <select name="usia_korban" id="usia" class="form-control">
                                                                     <option value="1">0 Tahun</option>
                                                                     <option value="2">1 Tahun</option>
                                                                     <option value="3">2 Tahun</option>
@@ -326,15 +345,15 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="password"> Pendidikan</label>
+                                                            <label class="col-lg-3 control-label " for="password"> Pendidikan Korban</label>
                                                             <div class="col-lg-9">
-                                                                <select name="pendidikan_id" id="pendidikan" class="form-control" required="">                              
-                                                                    <option value="1">Tidak Sekolah</option>
-                                                                    <option value="2">SD</option>
-                                                                    <option value="3">SMP</option>
-                                                                    <option value="4">SMA</option>
-                                                                    <option value="5">Perguruan Tinggi</option>
-                                                                    <option value="6">Tidak diketahui</option>
+                                                                <select name="pendidikan_korban" id="pendidikan" class="form-control">                              
+                                                                    <option value="0">Tidak Sekolah</option>
+                                                                    <option value="1">SD</option>
+                                                                    <option value="2">SMP</option>
+                                                                    <option value="3">SMA</option>
+                                                                    <option value="4">Perguruan Tinggi</option>
+                                                                    <option value="5">Tidak diketahui</option>
                                                                 </select>
 
                                                             </div>
@@ -343,10 +362,10 @@
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Pekerjaan</label>
                                                             <div class="col-lg-9">
-                                                                <select name="pekerjaan" id="pekerjaan" class="form-control" required="">
+                                                                <select name="pekerjaan" id="pekerjaan" class="form-control">
                                                                     <option value="">--Pilih Salah Satu--</option>
-                                                                    <option value="Bekerja">Bekerja</option>
-                                                                    <option value="Belum Bekerja">Belum Bekerja</option>
+                                                                    <option value="0">Bekerja</option>
+                                                                    <option value="1">Belum Bekerja</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -354,7 +373,7 @@
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="userName">Status Perkawinan</label>
                                                             <div class="col-lg-9">
-                                                                <select name="perkawinan_id" id="perkawinan_id" class="form-control" required="">                               
+                                                                <select name="perkawinan_korban" id="perkawinan_id" class="form-control">                               
                                                                     <option value="1">Belum Kawin</option>
                                                                     <option value="2">Kawin</option>
                                                                     <option value="3">Cerai</option>
@@ -367,36 +386,37 @@
                                                             <div class="col-lg-9">
                                                                 <li class="list-group-item">
                                                                     <div class="checkbox checkbox-primary">
-                                                                        <input class="todo-done" id="1" type="checkbox" ><label for="1">Fisik</label><p style="padding-bottom: 5px"></p>
-                                                                        <input class="todo-done" id="2" type="checkbox" ><label for="2">Psikis</label><p style="padding-bottom: 5px"></p>
-                                                                        <input class="todo-done" id="3" type="checkbox" ><label for="3">Seksual</label><p style="padding-bottom: 5px"></p>
-                                                                        <input class="todo-done" id="4" type="checkbox" ><label for="4">Penelantaran</label><p style="padding-bottom: 5px"></p>
-                                                                        <input class="todo-done" id="5" type="checkbox" ><label for="5">Eksploitasi</label><p style="padding-bottom: 5px"></p>
-                                                                        <input class="todo-done" id="6" type="checkbox" ><label for="6">Perdagangan Orang</label><p style="padding-bottom: 5px"></p>
-                                                                        <input class="todo-done" id="7" type="checkbox" ><label for="7">Lainnya</label>
-                                                                        </div></li>
+                                                                    <?php
+                                                                        foreach($kekerasan as $k){
+                                                                    ?>
+                                                                        <input class="todo-done" id="1" type="checkbox" name='item[]' nid='item[]' value="<?php echo $k->id_kekerasan ?>"><label for="1"><?php echo $k->kategori_kekerasan ?></label><p style="padding-bottom: 5px"></p>
+                                                                    <?php
+                                                                        }
+                                                                    ?>
+                                                                    </div>
+                                                                </li>
 
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Tempat Kejadian</label>
                                                             <div class="col-lg-9">
-                                                                <select name="perkawinan_id" id="perkawinan_id" class="form-control" required="">                               
-                                                                    <option value="1">Rumah Tangga</option>
-                                                                    <option value="2">Tempat Kerja</option>
-                                                                    <option value="3">Sekolah</option>
-                                                                    <option value="4">Kampus</option>
-                                                                    <option value="5">Lainnya</option>
+                                                                <select name="tempat_kejadian" id="" class="form-control">                               
+                                                                    <option value="0">Rumah Tangga</option>
+                                                                    <option value="1">Tempat Kerja</option>
+                                                                    <option value="2">Sekolah</option>
+                                                                    <option value="3">Kampus</option>
+                                                                    <option value="4">Lainnya</option>
                                                                 </select>
                                                             </div>
                                                         </div>                                                        
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Difabel?</label>
                                                             <div class="col-lg-9">
-                                                                <select name="perkawinan_id" id="perkawinan_id" class="form-control" required="">                               
+                                                                <select name="difabel" id="difabel" class="form-control">                               
                                                                     <option>-</option>
+                                                                    <option value="0">Tidak</option>
                                                                     <option value="1">Ya</option>
-                                                                    <option value="2">Tidak</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -409,25 +429,31 @@
                                                     <h3 style="padding-bottom: 10px">Data Ciri Pelaku Kekerasan</h3>
                                                     <div class="col-md-6">
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="userName">Nama</label>
+                                                            <label class="col-lg-3 control-label " for="">NIK Pelaku</label>
                                                             <div class="col-lg-9">
-                                                                <input class="form-control required" id="userName" name="userName" type="text">
+                                                                <input class="form-control required" id="" name="nik_pelaku" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group clearfix">
+                                                            <label class="col-lg-3 control-label " for="">Nama</label>
+                                                            <div class="col-lg-9">
+                                                                <input class="form-control required" id="" name="nama_pelaku" type="text">
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="password">Jenis Kelamin</label>
                                                             <div class="col-lg-9">
-                                                                <select class="form-control">
+                                                                <select class="form-control" name="jk_pelaku">
                                                                     <option>-</option>
-                                                                    <option>Laki-Laki</option>
-                                                                    <option>Perempuan</option>
+                                                                    <option value="0">Laki-Laki</option>
+                                                                    <option value="1">Perempuan</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
-                                                            <label class="col-lg-3 control-label " for="userName">Usia Korban</label>
+                                                            <label class="col-lg-3 control-label " for="userName">Usia Pelaku</label>
                                                             <div class="col-lg-9">
-                                                                <select name="usia_id" id="usia" class="form-control" required="">
+                                                                <select name="usia_id" id="usia" class="form-control">
                                                                     <option value="1">0 Tahun</option>
                                                                     <option value="2">1 Tahun</option>
                                                                     <option value="3">2 Tahun</option>
@@ -536,13 +562,13 @@
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="password"> Pendidikan</label>
                                                             <div class="col-lg-9">
-                                                                <select name="pendidikan_id" id="pendidikan" class="form-control" required="">                              
-                                                                    <option value="1">Tidak Sekolah</option>
-                                                                    <option value="2">SD</option>
-                                                                    <option value="3">SMP</option>
-                                                                    <option value="4">SMA</option>
-                                                                    <option value="5">Perguruan Tinggi</option>
-                                                                    <option value="6">Tidak diketahui</option>
+                                                                <select name="pendidikan_pelaku" id="pendidikan" class="form-control">                              
+                                                                    <option value="0">Tidak Sekolah</option>
+                                                                    <option value="1">SD</option>
+                                                                    <option value="2">SMP</option>
+                                                                    <option value="3">SMA</option>
+                                                                    <option value="4">Perguruan Tinggi</option>
+                                                                    <option value="5">Tidak diketahui</option>
                                                                 </select>
 
                                                             </div>
@@ -552,33 +578,34 @@
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Pekerjaan</label>
                                                             <div class="col-lg-9">
-                                                                <select name="pekerjaan" id="pekerjaan" class="form-control" required="">
+                                                                <select name="pekerjaan_pelaku" id="" class="form-control">
                                                                     <option value="">- Pilih Salah Satu -</option>
-                                                                    <option value="">Bekerja</option>
-                                                                    <option value="">Belum Bekerja</option>
+                                                                    <option value="0">Bekerja</option>
+                                                                    <option value="1">Belum Bekerja</option>
+                                                                    <option value="2">Tidak Diketahui</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Hubungan Dengan Korban</label>
                                                             <div class="col-lg-9">
-                                                                <select name="pekerjaan" id="pekerjaan" class="form-control" required="">
+                                                                <select name="hubungan_pelaku" id="" class="form-control">
                                                                     <option value="">- Pilih Salah Satu -</option>
-                                                                    <option value="">Orang Tua</option>
-                                                                    <option value="">Keluarga</option>
-                                                                    <option value="">Suami/Istri</option>
-                                                                    <option value="">Teman</option>
-                                                                    <option value="">Lainnya</option>
+                                                                    <option value="0">Orang Tua</option>
+                                                                    <option value="1">Keluarga</option>
+                                                                    <option value="2">Suami/Istri</option>
+                                                                    <option value="3">Teman</option>
+                                                                    <option value="4">Lainnya</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-group clearfix">
                                                             <label class="col-lg-3 control-label " for="confirm">Kebangsaan</label>
                                                             <div class="col-lg-9">
-                                                                <select name="pekerjaan" id="pekerjaan" class="form-control" required="">
+                                                                <select name="kebangsaan" id="kebangsaan" class="form-control">
                                                                     <option value="">- Pilih Salah Satu -</option>
-                                                                    <option value="">WNI</option>
-                                                                    <option value="">WNA</option>
+                                                                    <option value="0">WNI</option>
+                                                                    <option value="1">WNA</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -588,9 +615,20 @@
                                                 <div class="tab-pane" id="messages">    
                                                     <h3 style="padding-bottom: 10px">Laporkan Data Kekerasan</h3>
                                                     <div class="form-group clearfix">
-                                                        <label class="col-lg-3 control-label " for="userName">Keterangan</label>
+                                                            <label class="col-lg-3 control-label " for="confirm">Jenis&nbsp;Kasus</label>
+                                                            <div class="col-lg-9">
+                                                                <select class="form-control" name="jenis_kasus">
+                                                                    <option>-</option>
+                                                                    <option value="0">Baru</option>
+                                                                    <option value="1">Ulang</option>
+                                                                    <option value="2">Rujukan</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    <div class="form-group clearfix">
+                                                        <label class="col-lg-3 control-label " for=" ">Keterangan</label>
                                                         <div class="col-lg-9">
-                                                            <textarea class="form-control" rows="5"></textarea>
+                                                            <textarea class="form-control" rows="5" name="ket"></textarea>
                                                             <small>Tambahkan keterangan lain jika ada.</small>
                                                         </div>
                                                     </div>                                                    
@@ -600,17 +638,18 @@
                                                     <div class="form-group clearfix">
                                                         <div class="col-lg-12">
                                                             <div class="checkbox checkbox-primary">
-                                                                <input class="todo-done" id="1" type="checkbox" required=""><label for="1">Dengan ini saya pelapor mengajukan pengaduan kekerasan, dan saya siap menanggung bila laporan ini tidak benar dan dihukum sesuai dengan undang-undang yang berlaku</label><p style="padding-bottom: 5px"></p>
+                                                                <input class="todo-done" id="1" type="checkbox" required=""><label for="1">Dengan ini saya pelapor mengajukan pengaduan kekerasan, dan saya siap menanggung bila laporan ini tidak benar dan dikenai sanksi sesuai dengan peraturan yang berlaku.</label><p style="padding-bottom: 5px"></p>
                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group clearfix">
                                                         <p align="right">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light m-b-5">Laporkan</button>
+                                                            <input type="submit" name="submit" class="btn btn-primary waves-effect waves-light m-b-5" value="Laporkan">
                                                         </p>
                                                     </div> 
                                                 </div> 
-                                            </div> 
+                                            </div>
+                                             </form>
                                         </div>
                                     </div>  <!-- End panel-body -->
                                 </div> <!-- End panel -->
